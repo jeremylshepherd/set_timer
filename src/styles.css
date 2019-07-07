@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Black+Ops+One|Bungee+Inline|Fredoka+One|Nosifer|Righteous|Rubik+Mono+One|Russo+One&display=swap');
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 99vw;
+  background: linear-gradient(
+    to right,
+    black 7.5%,
+    blue 7.5%,
+    blue 15%,
+    black 15%,
+    black 22.5%,
+    rgba(0, 0, 0, 0.8) 23%,
+    #2d345c 23%
+  );
+  font-family: 'Archivo Black';
+  color: #f3f2f1;
+  overflow-x: hidden;
+}
+body .app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+}
+body .app canvas {
+  font-family: Archivo Black;
+}
+body .app .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 55;
+}
+body .app .title {
+  font-family: 'Black Ops One';
+  font-size: 5vmin;
+  text-align: center;
+  padding-right: 1vw;
+  z-index: 55;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.75);
+}
+body .app .data {
+  font-family: 'Black Ops One';
+  font-size: 4vmin;
+  text-align: center;
+  padding-right: 1vw;
+  z-index: 50;
+}
+body .app #viz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+body .app input,
+body .app .button {
+  border: 1px solid black;
+  padding: 20px;
+  min-width: 20vw;
+  text-align: center;
+  margin: 1vh;
+  border-radius: 10px;
+  border-color: white;
+  color: #f3f2f1;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+body .app .start {
+  background: blue;
+  min-width: 5vw;
+}
+body .app .start:active {
+  background-color: darkblue;
+}
+body .app .reset {
+  background: #d63031;
+  margin-bottom: 10vh;
+}
+body .app .reset:active {
+  background-color: #801919;
+}
+body .app .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .app .footer input {
+  color: black;
+  padding: 0.4em;
+  font-size: 2em;
+  min-width: 5vw;
+  max-width: 10vw;
+}
