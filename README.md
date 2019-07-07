@@ -1,4 +1,4 @@
-#SetTimer
+# SetTimer
 
 A simple Progressive Web Application to track sets completed and time rest periods.
 
