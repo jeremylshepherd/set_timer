@@ -5,7 +5,7 @@
   "keywords": [],
   "main": "src/index.js",
   "auther": "Jeremy L. Shepherd",
-  "repository": "https://github.com/jeremylshepherd/set_timer",
+  "repository": "https://jeremylshepherd.github.io/set_timer",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "16.8.6",
