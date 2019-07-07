@@ -1,9 +1,9 @@
-import React from 'react';
-import Timer from './Timer';
+import React from "react";
+import Timer from "./Timer";
 
 export default class Main extends React.Component {
   state = {
-    name: 'APP',
+    name: "APP",
     sets: 0,
     seconds: 60,
     rest: 60,
@@ -13,7 +13,7 @@ export default class Main extends React.Component {
   };
 
   timerStop = () => {
-    console.log('Timer stopped');
+    console.log("Timer stopped");
     clearInterval(this.timer);
     this.setState({ active: !this.state.active });
   };
@@ -56,7 +56,7 @@ export default class Main extends React.Component {
         window.navigator.vibrate([200, 200, 200]);
       } else {
         //Once i gets to 99, decrement seconds and reset i to zero
-        if (i == 99) {
+        if (i === 99) {
           this.setState({
             seconds: seconds--
           });
@@ -104,36 +104,37 @@ export default class Main extends React.Component {
         <div className="header">
           <h1 className="title">Set Counter/Rest Timer</h1>
         </div>
-        <h2 className="data">{`Sets: ${this.state.sets}`}</h2>
         <div id="viz">
+          <h2 className="data">{`Sets: ${this.state.sets}`}</h2>
           <span onClick={this.setDone}>
             <Timer
               fraction={this.state.fraction}
               seconds={this.state.seconds}
             />
           </span>
+          <div className="rest">
+            {this.state.editing ? (
+              <React.Fragment>
+                <h1 className="title">Rest: </h1>
+                <input
+                  type="number"
+                  value={this.state.rest}
+                  onChange={this.updateRest}
+                  min={1}
+                  step={1}
+                />
+                <span className="button start" onClick={this.toggleRest}>
+                  CLOSE
+                </span>
+              </React.Fragment>
+            ) : (
+              <h1 className="title" onClick={this.toggleRest}>{`Rest: ${
+                this.state.rest
+              }`}</h1>
+            )}
+          </div>
         </div>
-        <div className="footer">
-          {this.state.editing ? (
-            <React.Fragment>
-              <h1 className="title">Rest: </h1>
-              <input
-                type="number"
-                value={this.state.rest}
-                onChange={this.updateRest}
-                min={1}
-                step={1}
-              />
-              <span className="button start" onClick={this.toggleRest}>
-                CLOSE
-              </span>
-            </React.Fragment>
-          ) : (
-            <h1 className="title" onClick={this.toggleRest}>{`Rest: ${
-              this.state.rest
-            }`}</h1>
-          )}
-        </div>
+
         <span className="button reset" onClick={this.reset}>
           RESET
         </span>
