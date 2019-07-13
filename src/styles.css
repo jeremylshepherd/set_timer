@@ -15,15 +15,16 @@ body {
   background-color: #2d345c;
   background: linear-gradient(
     to right,
-    #2d345c 37.5%,
-    black 37.5%,
-    black 45%,
-    blue 45%,
-    blue 52.5%,
-    black 52.5%,
-    black 60.5%,
-    rgba(0, 0, 0, 0.8) 60.5%,
-    #2d345c 61.5%
+    #2d345c 0vw,
+    #2d345c 40vw,
+    black 40vw,
+    black 46.66vw,
+    blue 46.66vw,
+    blue 53.34vw,
+    black 53.34vw,
+    black 60vw,
+    #2d345c 60vw,
+    #2d345c 100vw
   );
   font-family: "Archivo Black";
   color: #f3f2f1;
@@ -133,7 +134,7 @@ body .app #viz .rest input {
     width: 100vw;
     padding-left: 5vw;
     padding-right: 5vw;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   body .app #viz .data {
